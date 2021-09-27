@@ -2,7 +2,6 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 import {useParams, useHistory, Link } from "react-router-dom";
-import { IChirps } from "./Chirps";
 import {IChirp} from './Home';
 import {IChirpStore} from './Home'
 
@@ -73,17 +72,17 @@ const SingleChirp = () => {
                         </div>
                         <div className="card-body">
                             <h5 className="card-title">"{chirp.text}"</h5>
-                            <p className="card-text">id:{chirp.id}</p>
-            {/* edit btn */}
-                        <div onClick={()=>hist.goBack()} className="btn btn-primary m-2">
-                                Go Back
-                            </div>
+                            
+                            {/* go home btn */}
+                            <Link to={`/`} key={chirp.id} 
+                            className="btn btn-primary m-2 shadow "> Return to Chirps                
+                            </Link>
 
 
+                            {/* admin btn */}
                             <Link to={`/chirps/${chirp.id}/edit`} key={chirp.id} 
                             className="btn btn-primary m-2 shadow "> Admin Options                
                             </Link>
-            {/* delete btn */}
 
                 
                         </div>

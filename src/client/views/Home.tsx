@@ -77,7 +77,7 @@ const [chirps, setChirps] = useState<IChirp[]>([]);
                 
                 <div className="row justify-content-center">
 
-                <h1 className="display-1">Home</h1>
+                <h1 className="display-3 m-3">👋 Welcome to TypeScript Chirper!🐦 </h1>
 
                     {chirps.map(chirp => (
 
